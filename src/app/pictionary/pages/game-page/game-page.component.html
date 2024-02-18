@@ -1,7 +1,16 @@
 <div>
   <h3>Round #{{ this.round }}</h3>
-  <pictionary-game-guidance [activeTeam]="activeTeam" [currentStep]="currentStep" (cardPickedEvent)="cardPicked($event)"></pictionary-game-guidance>
-  <pictionary-scoreboard [turn]="turn" (updateScoreEvent)="scoreUpdated($event)"></pictionary-scoreboard>
-  <pictionary-countdown-timer (endOfTurnEvent)="endOfTurn()"></pictionary-countdown-timer>
+  <pictionary-game-guidance
+    [activeTeam]="activeTeam"
+    [currentStep]="currentStep"
+    (cardPickedEvent)="cardPicked($event)"
+  ></pictionary-game-guidance>
+  <pictionary-scoreboard
+    [turn]="turn"
+    (updateScoreEvent)="scoreUpdated($event)"
+  ></pictionary-scoreboard>
+  <pictionary-countdown-timer
+    (endOfTurnEvent)="endOfTurn()"
+  ></pictionary-countdown-timer>
   <pictionary-game-ender [winner]="getWinner()"></pictionary-game-ender>
 </div>

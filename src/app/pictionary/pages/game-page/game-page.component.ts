@@ -2,14 +2,11 @@ import { Component } from '@angular/core';
 import { STEP } from '../../common/step.enum';
 import { Score } from '../../common/score.interface';
 
-const TEAMS: string[] = [
-  'Team A',
-  'Team B',
-]
+const TEAMS: string[] = ['Team A', 'Team B'];
 
 interface PictionaryScore {
-  teamA: number,
-  teamB: number,
+  teamA: number;
+  teamB: number;
 }
 
 @Component({
@@ -26,8 +23,8 @@ export class GamePageComponent {
   currentCard: string = '';
   currentScore: PictionaryScore = {
     teamA: 0,
-    teamB: 0
-  }
+    teamB: 0,
+  };
 
   cardPicked(card: string): void {
     this.currentStep = STEP.GUESS;
@@ -51,6 +48,8 @@ export class GamePageComponent {
   }
 
   getWinner(): string {
-    return this.currentScore.teamA > this.currentScore.teamB ? 'Team A' : 'Team B';
+    return this.currentScore.teamA > this.currentScore.teamB
+      ? 'Team A'
+      : 'Team B';
   }
 }

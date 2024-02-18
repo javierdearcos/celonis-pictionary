@@ -15,7 +15,7 @@ export class GameGuidanceComponent {
   @Output()
   cardPickedEvent: EventEmitter<string> = new EventEmitter<string>();
 
-  bubbleCardPicked(card: string):void {
+  bubbleCardPicked(card: string): void {
     this.cardPickedEvent.emit(card);
   }
 }

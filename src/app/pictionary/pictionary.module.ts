@@ -11,8 +11,6 @@ import { GameGuidanceComponent } from './components/game-guidance/game-guidance.
 import { GameEnderComponent } from './components/game-ender/game-ender.component';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [
     HomePageComponent,
@@ -23,16 +21,9 @@ import { RouterModule } from '@angular/router';
     ScoreboardComponent,
     ScoreComponent,
     CardPickerComponent,
-    GameGuidanceComponent
+    GameGuidanceComponent,
   ],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
-  exports: [
-    HomePageComponent,
-    InstructionsPageComponent,
-    GamePageComponent
-  ]
+  imports: [CommonModule, RouterModule],
+  exports: [HomePageComponent, InstructionsPageComponent, GamePageComponent],
 })
-export class PictionaryModule { }
+export class PictionaryModule {}

@@ -1,4 +1,4 @@
-<div class="modal fade show" tabindex="-1" [ngStyle]="{display: display}">
+<div class="modal fade show" tabindex="-1" [ngStyle]="{ display: display }">
   <div class="modal-dialog modal-dialog-centered text-dark rounded p-2">
     <div class="modal-content">
       <div class="modal-body">
@@ -9,10 +9,6 @@
   </div>
 </div>
 
-<button
-  type="button"
-  class="btn btn-light"
-  (click)="openModal()"
->
+<button type="button" class="btn btn-light" (click)="openModal()">
   End game
 </button>

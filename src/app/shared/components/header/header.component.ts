@@ -4,6 +4,4 @@ import { Component } from '@angular/core';
   selector: 'shared-header',
   templateUrl: './header.component.html',
 })
-export class HeaderComponent {
-
-}
+export class HeaderComponent {}

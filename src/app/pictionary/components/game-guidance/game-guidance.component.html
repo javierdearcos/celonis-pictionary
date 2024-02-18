@@ -1,9 +1,20 @@
 <div *ngIf="currentStep === StepType.PICK_A_CARD">
-  <p class="text-info">{{ this.activeTeam }} <pictionary-card-picker (cardPickedEvent)="bubbleCardPicked($event)"></pictionary-card-picker></p>
+  <p class="text-info">
+    {{ this.activeTeam }}
+    <pictionary-card-picker
+      (cardPickedEvent)="bubbleCardPicked($event)"
+    ></pictionary-card-picker>
+  </p>
 </div>
 <div *ngIf="currentStep === StepType.GUESS">
-  <p class="text-info">Start the timer. {{ this.activeTeam }}, you have one minute to draw and guess!</p>
+  <p class="text-info">
+    Start the timer. {{ this.activeTeam }}, you have one minute to draw and
+    guess!
+  </p>
 </div>
 <div *ngIf="currentStep === StepType.UPDATE_SCORES">
-  <p class="text-info">End of the current turn. Update scores and remind to take a picture for posterity.</p>
+  <p class="text-info">
+    End of the current turn. Update scores and remind to take a picture for
+    posterity.
+  </p>
 </div>

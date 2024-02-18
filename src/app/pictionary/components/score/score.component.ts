@@ -16,7 +16,7 @@ export class ScoreComponent {
 
   public incrementScore(): void {
     this.score++;
-    this.updateScoreEvent.emit({teamName: this.teamName, score: this.score});
+    this.updateScoreEvent.emit({ teamName: this.teamName, score: this.score });
   }
 
   public decrementScore(): void {
@@ -25,8 +25,6 @@ export class ScoreComponent {
     }
 
     this.score--;
-    this.updateScoreEvent.emit({teamName: this.teamName, score: this.score});
+    this.updateScoreEvent.emit({ teamName: this.teamName, score: this.score });
   }
-
-
 }

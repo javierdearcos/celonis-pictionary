@@ -21,7 +21,7 @@ export class CountdownTimerComponent implements OnInit {
   public ngOnInit(): void {
     this.time = {
       minutes: this.minutes,
-      seconds: 0
+      seconds: 0,
     };
   }
 
@@ -39,7 +39,7 @@ export class CountdownTimerComponent implements OnInit {
       this.subscription.unsubscribe();
       this.time = {
         minutes: this.minutes,
-        seconds: 0
+        seconds: 0,
       };
     }
   }
@@ -56,7 +56,7 @@ export class CountdownTimerComponent implements OnInit {
       this.subscription.unsubscribe();
       this.time = {
         minutes: this.minutes,
-        seconds: 0
+        seconds: 0,
       };
     }
   }
