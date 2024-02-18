@@ -1,13 +1,11 @@
-<div class="container">
-  <div class="row">
+<div class="p-3">
+  <div class="d-flex justify-content-center">
     <pictionary-score
-      class="col"
       teamName="Team A"
       [active]="turn % 2 === 0"
       (updateScoreEvent)="bubbleUpdateScoreEvent($event)"
     ></pictionary-score>
     <pictionary-score
-      class="col"
       teamName="Team B"
       [active]="turn % 2 !== 0"
       (updateScoreEvent)="bubbleUpdateScoreEvent($event)"

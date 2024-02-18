@@ -1,10 +1,10 @@
-<div class="container text-center">
+<div class="fs-3 text-center px-3">
   <div class="row">
     <p [class.fw-bold]="active">{{ this.teamName }}</p>
   </div>
   <div class="row align-items-center bg-white text-dark rounded">
     <div class="col m-0 p-0">
-      <button class="btn btn-block btn-outline" (click)="decrementScore()">
+      <button class="btn btn-lg btn-outline" (click)="decrementScore()">
         -
       </button>
     </div>
@@ -12,7 +12,7 @@
       <p class="m-auto">{{ this.score }}</p>
     </div>
     <div class="col m-0 p-0">
-      <button class="btn btn-block btn-outline" (click)="incrementScore()">
+      <button class="btn btn-lg btn-outline" (click)="incrementScore()">
         +
       </button>
     </div>
