@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <pictionary-score
+      class="col"
+      teamName="Team A"
+      [active]="turn % 2 === 0"
+      (updateScoreEvent)="bubbleUpdateScoreEvent($event)"
+    ></pictionary-score>
+    <pictionary-score
+      class="col"
+      teamName="Team B"
+      [active]="turn % 2 !== 0"
+      (updateScoreEvent)="bubbleUpdateScoreEvent($event)"
+    ></pictionary-score>
+  </div>
+</div>

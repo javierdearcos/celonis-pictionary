@@ -1,0 +1,31 @@
+<div class="modal fade show" tabindex="-1" [ngStyle]="{ display: display }">
+  <div class="modal-dialog modal-dialog-centered text-dark rounded p-2">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div
+          *ngIf="loading; else selectedCard"
+          class="spinner-border"
+          role="status"
+        >
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <ng-template #selectedCard
+          ><p class="display-5 text-center">{{ this.card }}</p></ng-template
+        >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a
+  type="button"
+  class="text-info text-decoration-underline"
+  (click)="openModal()"
+>
+  pick a card
+</a>
