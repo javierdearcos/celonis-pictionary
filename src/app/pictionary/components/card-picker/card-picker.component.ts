@@ -1,10 +1,19 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
 const CARD_DECK: string[] = [
+  'Object Centric Data Model (OCDM)',
+  'Knowledge Layer',
+  'Business Miner',
+  'Celonis Studio',
+  'Process Explorer',
+  'Process Co-pilot',
+  'Execution Apps',
+  'Action Flows',
+  'Business Process Manager (Symbio)',
   'Process Adherence Manager',
   'Transformation Hub',
-  'Studio',
-  'Copilot',
+  'Intelligence API',
+  'Orchestration Engine',
 ];
 
 @Component({
