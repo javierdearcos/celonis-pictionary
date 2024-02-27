@@ -62,7 +62,7 @@ export class CountdownTimerComponent implements OnInit {
   }
 
   private playEndSound(): void {
-    const audio = new Audio('../../../assets/audio/timer-end.mp3');
+    const audio = new Audio('https://javierdearcos.github.io/celonis-pictionary/assets/audio/timer-end.mp3');
     audio.load();
     audio.play();
   }
