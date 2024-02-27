@@ -10,20 +10,22 @@ import { CardPickerComponent } from './components/card-picker/card-picker.compon
 import { GameGuidanceComponent } from './components/game-guidance/game-guidance.component';
 import { GameEnderComponent } from './components/game-ender/game-ender.component';
 import { RouterModule } from '@angular/router';
+import { DescriptionCheckerComponent } from './components/description-checker/description-checker.component';
 
 @NgModule({
   declarations: [
     HomePageComponent,
     CountdownTimerComponent,
+    CardPickerComponent,
+    DescriptionCheckerComponent,
     InstructionsPageComponent,
     GameEnderComponent,
+    GameGuidanceComponent,
     GamePageComponent,
     ScoreboardComponent,
     ScoreComponent,
-    CardPickerComponent,
-    GameGuidanceComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [HomePageComponent, InstructionsPageComponent, GamePageComponent],
 })
-export class PictionaryModule {}
+export class PictionaryModule { }

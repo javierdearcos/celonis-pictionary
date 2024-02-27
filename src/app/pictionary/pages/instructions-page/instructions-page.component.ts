@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   selector: 'pictionary-instructions-page',
   templateUrl: './instructions-page.component.html',
 })
-export class InstructionsPageComponent {}
+export class InstructionsPageComponent { }

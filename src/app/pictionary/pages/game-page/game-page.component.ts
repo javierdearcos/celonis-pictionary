@@ -19,7 +19,7 @@ export class GamePageComponent {
   round: number = 1;
   turn: number = 0;
   activeTeam: string = TEAMS[0];
-  currentStep: STEP = STEP.PICK_A_CARD;
+  currentStep: STEP = STEP.PICK_A_PRODUCT_CARD;
   currentCard: string = '';
   currentScore: PictionaryScore = {
     teamA: 0,
@@ -27,12 +27,17 @@ export class GamePageComponent {
   };
 
   cardPicked(card: string): void {
-    this.currentStep = STEP.GUESS;
+    this.currentStep = STEP.GUESS_PRODUCT;
+    console.log(`Current card is ${this.currentCard}`);
     this.currentCard = card;
   }
 
-  endOfTurn(): void {
+  timeEnded(): void {
     this.turn++;
+    this.currentStep = STEP.CHECK_PRODUCT_DESCRIPTION;
+  }
+
+  descriptionChecked(): void {
     this.currentStep = STEP.UPDATE_SCORES;
   }
 
@@ -44,12 +49,12 @@ export class GamePageComponent {
     }
     this.round = 1 + Math.floor(this.turn / 2);
     this.activeTeam = TEAMS[this.turn % 2];
-    this.currentStep = STEP.PICK_A_CARD;
+    this.currentStep = STEP.PICK_A_PRODUCT_CARD;
   }
 
   getWinner(): string {
     return this.currentScore.teamA > this.currentScore.teamB
       ? 'Team A'
-      : 'Team B';
+      : this.currentScore.teamA < this.currentScore.teamB ? 'Team B' : '';
   }
 }

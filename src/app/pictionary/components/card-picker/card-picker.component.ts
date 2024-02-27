@@ -47,12 +47,12 @@ export class CardPickerComponent {
   }
 
   closeModal(): void {
+    this.cardPickedEvent.emit(this.card);
     this.display = 'none';
     this.loading = true;
     this.card = '';
     if (!this.cards.length) {
       this.cards = [...CARD_DECK];
     }
-    this.cardPickedEvent.emit(this.card);
   }
 }

@@ -11,11 +11,19 @@ export class GameGuidanceComponent {
   @Input()
   activeTeam: string = '';
   @Input()
-  currentStep: STEP = STEP.PICK_A_CARD;
+  currentCard: string = '';
+  @Input()
+  currentStep: STEP = STEP.PICK_A_PRODUCT_CARD;
   @Output()
   cardPickedEvent: EventEmitter<string> = new EventEmitter<string>();
+  @Output()
+  descriptionCheckedEvent: EventEmitter<void> = new EventEmitter<void>();
 
   bubbleCardPicked(card: string): void {
     this.cardPickedEvent.emit(card);
+  }
+
+  bubbleDescriptionChecked(): void {
+    this.descriptionCheckedEvent.emit();
   }
 }

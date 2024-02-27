@@ -16,7 +16,7 @@ export class CountdownTimerComponent implements OnInit {
   @Input()
   private minutes: number = 1;
   @Output()
-  private endOfTurnEvent: EventEmitter<void> = new EventEmitter<void>();
+  private timeEndedEvent: EventEmitter<void> = new EventEmitter<void>();
 
   public ngOnInit(): void {
     this.time = {
@@ -35,7 +35,7 @@ export class CountdownTimerComponent implements OnInit {
 
   public stop(): void {
     if (this.subscription) {
-      this.endOfTurnEvent.emit();
+      this.timeEndedEvent.emit();
       this.subscription.unsubscribe();
       this.time = {
         minutes: this.minutes,
@@ -52,7 +52,7 @@ export class CountdownTimerComponent implements OnInit {
       this.time.seconds = 59;
     } else {
       this.playEndSound();
-      this.endOfTurnEvent.emit();
+      this.timeEndedEvent.emit();
       this.subscription.unsubscribe();
       this.time = {
         minutes: this.minutes,

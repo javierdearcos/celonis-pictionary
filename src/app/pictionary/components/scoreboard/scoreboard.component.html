@@ -1,14 +1,8 @@
 <div class="p-3">
   <div class="d-flex justify-content-center">
-    <pictionary-score
-      teamName="Team A"
-      [active]="turn % 2 === 0"
-      (updateScoreEvent)="bubbleUpdateScoreEvent($event)"
-    ></pictionary-score>
-    <pictionary-score
-      teamName="Team B"
-      [active]="turn % 2 !== 0"
-      (updateScoreEvent)="bubbleUpdateScoreEvent($event)"
-    ></pictionary-score>
+    <pictionary-score teamName="Team A" [active]="turn % 2 === 0"
+      (updateScoreEvent)="bubbleUpdateScoreEvent($event)"></pictionary-score>
+    <pictionary-score teamName="Team B" [active]="turn % 2 !== 0"
+      (updateScoreEvent)="bubbleUpdateScoreEvent($event)"></pictionary-score>
   </div>
 </div>

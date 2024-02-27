@@ -5,4 +5,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'pictionary-home-page',
   templateUrl: './home-page.component.html',
 })
-export class HomePageComponent {}
+export class HomePageComponent { }
