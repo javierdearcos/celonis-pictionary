@@ -1,7 +1,7 @@
 <div>
   <h3>Round #{{ this.round }}</h3>
-  <pictionary-game-guidance [activeTeam]="activeTeam" [currentCard]="currentCard" [currentStep]="currentStep" (cardPickedEvent)="cardPicked($event)"
-    (descriptionCheckedEvent)="descriptionChecked()"></pictionary-game-guidance>
+  <pictionary-game-guidance [activeTeam]="activeTeam" [currentCard]="currentCard" [currentStep]="currentStep"
+    (cardPickedEvent)="cardPicked($event)"></pictionary-game-guidance>
   <pictionary-scoreboard [turn]="turn" (updateScoreEvent)="scoreUpdated($event)"></pictionary-scoreboard>
   <pictionary-countdown-timer (timeEndedEvent)="timeEnded()"></pictionary-countdown-timer>
   <pictionary-game-ender [winner]="getWinner()"></pictionary-game-ender>

@@ -16,14 +16,12 @@ export class GameGuidanceComponent {
   currentStep: STEP = STEP.PICK_A_PRODUCT_CARD;
   @Output()
   cardPickedEvent: EventEmitter<string> = new EventEmitter<string>();
-  @Output()
-  descriptionCheckedEvent: EventEmitter<void> = new EventEmitter<void>();
 
   bubbleCardPicked(card: string): void {
     this.cardPickedEvent.emit(card);
   }
 
-  bubbleDescriptionChecked(): void {
-    this.descriptionCheckedEvent.emit();
+  getOppositeTeam(): string {
+    return this.activeTeam === 'Team A' ? 'Team B' : 'Team A';
   }
 }

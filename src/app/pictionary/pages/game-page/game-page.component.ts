@@ -34,10 +34,6 @@ export class GamePageComponent {
 
   timeEnded(): void {
     this.turn++;
-    this.currentStep = STEP.CHECK_PRODUCT_DESCRIPTION;
-  }
-
-  descriptionChecked(): void {
     this.currentStep = STEP.UPDATE_SCORES;
   }
 

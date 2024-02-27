@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 const PRODUCT_DESCRIPTIONS: Record<string, string> = {
   'Object Centric Data Model (OCDM)': 'The Object Centric Data model acts as an extensible data representation/digital twin of the business containing all of the objects, events and connections.',
@@ -24,8 +24,6 @@ const PRODUCT_DESCRIPTIONS: Record<string, string> = {
 export class DescriptionCheckerComponent {
   @Input()
   card: string = '';
-  @Output()
-  descriptionCheckedEvent: EventEmitter<void> = new EventEmitter<void>();
 
   display: string = 'none';
 
@@ -34,12 +32,10 @@ export class DescriptionCheckerComponent {
   }
 
   getDescription(): string {
-    console.log(`Picked ${this.card}. Showing description`);
     return PRODUCT_DESCRIPTIONS[this.card];
   }
 
   closeModal(): void {
     this.display = 'none';
-    this.descriptionCheckedEvent.emit();
   }
 }

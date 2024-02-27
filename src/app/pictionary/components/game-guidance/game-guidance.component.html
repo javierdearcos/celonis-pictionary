@@ -1,26 +1,23 @@
 <div class="text-info p-3">
   <div *ngIf="currentStep === StepType.PICK_A_PRODUCT_CARD">
-    <p>
-      {{ this.activeTeam }}
-      <pictionary-card-picker (cardPickedEvent)="bubbleCardPicked($event)">pick a card.</pictionary-card-picker>
-    </p>
+    <p>{{ this.activeTeam }}, select a person to draw.</p>
+    <p>Referee, hand over the app so the person can pick a card by clicking <pictionary-card-picker
+        (cardPickedEvent)="bubbleCardPicked($event)">here.</pictionary-card-picker></p>
   </div>
   <div *ngIf="currentStep === StepType.GUESS_PRODUCT">
-    <p>
-      Start the timer. {{ this.activeTeam }}, you have one minute to draw and
-      guess!
-    </p>
-  </div>
-  <div *ngIf="currentStep === StepType.CHECK_PRODUCT_DESCRIPTION">
-    <p>
-      Time ended. If one of the teams guessed correctly, ask product description or pitch for the extra point. Referee
-      can <pictionary-description-checker [card]="currentCard"
-        (descriptionCheckedEvent)="bubbleDescriptionChecked()">check the product description
-        here.</pictionary-description-checker>
+    <p>Referee, start the timer. You can stop the timer if the team guesses the product before the time ends.</p>
+    <p>{{ this.activeTeam }}, you have one minute to draw and guess correctly!</p>
   </div>
   <div *ngIf="currentStep === StepType.UPDATE_SCORES">
+    <p>Time ended!</p>
     <p>
-      End of the current turn. Update scores.
+      If {{ this.activeTeam }} guessed the product, they won 2 points and will have the opportunity to win 1 extra point
+      describing the product and when to pitch it. If not, {{ getOppositeTeam() }} will have the opportunity to win the
+      points. Referee, you can check the product description <pictionary-description-checker
+        [card]="currentCard">here.</pictionary-description-checker>
+    </p>
+    <p>
+      End of the current turn. Referee, update the score.
     </p>
   </div>
 </div>
